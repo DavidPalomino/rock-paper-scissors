@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    color: pink;
+    background-color: grey;
+}
+
+.title {
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* .button {
+    
+} */
