@@ -1,7 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: sans-serif;
-    color: pink;
     background-color: grey;
+}
+
+h1 {
+    color: #ffc0cb;
 }
 
 .title {
@@ -10,10 +19,20 @@ body {
 
 .buttons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
+    height: 75%;
+    width: 50%;
 }
 
 /* .button {
     
 } */
+
+.tableOfPlays {
+    background-color: lightgray;
+    width: 400px;
+    height: 560px;
+    padding-top: 20px;
+}
