@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,16 +10,27 @@
     <script src="logic.js"></script>
     <title>Rock, Paper, Scissors</title>
 </head>
+
 <body>
     <h1 class="title">Rock Paper Scissors Game</h1>
-
-    <div class="buttons">
-        <input type="button" value="Rock" class="button" onclick="startGame('rock')">
-        <input type="button" value="Paper" class="button" onclick="startGame('paper')">
-        <input type="button" value="Scissors" class="button" onclick="startGame('scissors')">   
+    <div class="items">
+        <div class="buttons">
+            <input type="button" value="Rock 🗿" class="button" onclick="startGame('rock')">
+            <input type="button" value="Paper 🧻" class="button" onclick="startGame('paper')">
+            <input type="button" value="Scissors 🔪" class="button" onclick="startGame('scissors')">
+        </div>
+        <div class="scores">
+            <div class="yourScore">
+                <h1 class="gameScoresTitle">You Score</h1>
+                <p class="gameScores" id='playerCounter'>0</p>
+            </div>
+            <div class="botScore">
+                <h1 class="gameScoresTitle">Bot Score</h1>
+                <p class="gameScores" id="botCounter">0</p>
+            </div>
+        </div>
     </div>
-    <div class="tableOfPlays" id="scoreTable">
-        
     </div>
 </body>
+
 </html>

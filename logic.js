@@ -3,7 +3,7 @@ function startGame(playerSelection) {
     let playInformation = play(machineSelection, playerSelection)
     let result = playInformation[0]
     alert(result)
-    setScoreTable(playInformation)
+    setPoints(playInformation)
 }
 
 function play(machineSelection, playerSelection) {
@@ -50,10 +50,26 @@ function createRandomSelection() {
     return selection
 }
 
-function setScoreTable(playInformation) {
-    //Score Table
-    var scoreTable = document.getElementById('scoreTable');
-    var score = document.createElement('p');
-    score.textContent = `${playInformation[0]} , YOU(${playInformation[1].toUpperCase()}) vs BOT(${playInformation[2].toUpperCase()}))`;
-    scoreTable.appendChild(score);
+function setPoints(playInformation) {
+    //Score Tables
+    const result = playInformation[0] 
+    if(result === 'You Win'){
+        const contador = document.getElementById('playerCounter');
+        let valor = parseInt(contador.textContent);
+        valor++;
+        contador.textContent = valor.toString();
+        console.log(`Tu = ${playInformation[1]}, Bot = ${playInformation[2]}`)
+    }
+    else if(result === 'You Lose') {
+        const contador = document.getElementById('botCounter');
+        let valor = parseInt(contador.textContent);
+        valor++;
+        contador.textContent = valor.toString();
+        console.log(`Tu = ${playInformation[1]}, Bot = ${playInformation[2]}`)
+    }
+    else{
+        return undefined
+    }
 }
+
+
